@@ -7,5 +7,5 @@ PASSWORD = os.getenv("DB_PASSWORD")
 
 
 def get_client():
-    return client.Client(ENDPOINT, username=USERNAME, password=PASSWORD,
+    return client.Client(ENDPOINT, 'g', username=USERNAME, password=PASSWORD,
                          message_serializer=serializer.GraphSONSerializersV2d0())
