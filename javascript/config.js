@@ -1,8 +1,10 @@
+const { process } = require("gremlin");
+
 var config = {}
 
-config.endpoint = "wss://DATABASE_ACCOUNT_NAME.gremlin.cosmosdb.azure.com:443/gremlin";
-config.primaryKey = "PRIMARYKEY";
-config.database = "GRAPHDATABASE"
-config.collection = "GRAPHCOLLECTION"
+config.endpoint = process.env.DB_ENDPOINT;
+config.primaryKey = process.env.DB_PRIMARY_KEY;
+config.database = process.env.DB_NAME;
+config.collection = process.env.DB_COLLECTION;
 
 module.exports = config;

@@ -1,6 +1,7 @@
 "use strict";
 
 const Gremlin = require('gremlin');
+require('dotenv').config();
 const config = require("./config");
 
 const authenticator = new Gremlin.driver.auth.PlainTextSaslAuthenticator(`/dbs/${config.database}/colls/${config.collection}`, config.primaryKey)
