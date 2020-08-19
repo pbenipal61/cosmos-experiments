@@ -1,5 +1,3 @@
-const { process } = require("gremlin");
-
 var config = {}
 
 config.endpoint = process.env.DB_ENDPOINT;
